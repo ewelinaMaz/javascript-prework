@@ -1,0 +1,84 @@
+/* Global*/
+$transition: transform .6s .25s ease-out;
+* {
+  box-sizing: border-box;
+}
+
+*:focus {
+  box-shadow: none;
+}
+body, html {
+  color: #1B1464;
+ font-size: 18px;
+ letter-spacing:2px;
+ font-weight:bold;
+ line-height: 1.7;
+ margin: 24 0 0 0;
+ height: 100%;
+ background: #D1D7E5;
+}
+.container {
+  width: 100%;
+  height: 50vh;
+  margin:0 auto;
+  background: #E5DFD1
+}
+#buttons{
+  display:flex;
+  width: 100%;
+  height: 50vh;
+  margin:0 auto;
+  align-content:space-around;
+  justify-content: space-around;
+}
+  button {
+    flex: 0 0 33,3%;
+    text-align:center;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #9AECDB;
+    border-radius: 50%;
+    box-shadow: 2px 4px 2px #1B1464;
+    margin-top: 30px;
+  }
+  #play-rock{
+    background-image: url(../images/stones.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  #play-paper{
+    background-image: url(../images/papier.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  #play-scissors{
+    background-image: url(../images/scissors-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+  }
+  button:hover {
+  transform: scale(1.1);
+  transition: $transition;
+  }
+#messages {
+  font-size: 20px;
+  margin-top: 25px;
+  font-style: italic;
+  font-family: sans-serif;
+  text-align: center;
+  display: border-box;
+  border:2px solid #1B1464;
+  border-left: none;
+  border-right: none;
+  border-top-style: groove;
+  border-bottom-style: groove;
+  margin-left: 150px;
+  margin-right: 150px;
+}
