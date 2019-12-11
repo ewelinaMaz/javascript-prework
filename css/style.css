@@ -38,16 +38,12 @@ body, html {
 }
 
 button {
-  -ms-flex: 0 0 33,3%;
-      flex: 0 0 33,3%;
-  text-align: center;
-  width: 200px;
-  height: 200px;
-  line-height: 200px;
+  width: 220px;
+  height: 220px;
+  line-height: 220px;
   color: #FFFFFF;
   font-size: 24px;
   font-weight: bold;
-  background-color: #9AECDB;
   border-radius: 50%;
   box-shadow: 2px 4px 2px #1B1464;
   margin-top: 30px;
@@ -76,7 +72,7 @@ button {
 
 button:hover {
   transform: scale(1.1);
-  transition: transform 0.6s 0.25s ease-out;
+  transition: transform all 1s;
 }
 
 #messages {
@@ -93,5 +89,13 @@ button:hover {
   border-bottom-style: groove;
   margin-left: 150px;
   margin-right: 150px;
+}
+
+#result {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 25px;
+  font-style: italic;
+  font-family: sans-serif;
 }
 /*# sourceMappingURL=style.css.map */
