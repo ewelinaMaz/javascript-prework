@@ -1,13 +1,12 @@
 {
-  var PlayerScore = 0;
-  var ComputerScore = 0;
+  let PlayerScore = 0;
+  let ComputerScore = 0;
 
   function playGame(playerInput) {
     clearMessages();
     //computer rule
     let randomNumber = Math.floor(Math.random() * 3 + 1),
     argComputerMove = getMoveName(randomNumber);
-
     function getMoveName(argMoveId) {
       if (argMoveId == '1') {
         return 'kamień';
