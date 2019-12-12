@@ -2,12 +2,11 @@
   let PlayerScore = 0;
   let ComputerScore = 0;
 
-  function playGame(playerInput) {
+  let playGame = function(playerInput) {
     clearMessages();
-    //computer rule
-    let randomNumber = Math.floor(Math.random() * 3 + 1),
-    argComputerMove = getMoveName(randomNumber);
-    function getMoveName(argMoveId) {
+    //Rules for computer and player
+    let randomNumber = Math.floor(Math.random() * 3 + 1);
+    const getMoveName = function(argMoveId) {
       if (argMoveId == '1') {
         return 'kamień';
       } else if (argMoveId == '2') {
@@ -16,17 +15,17 @@
         return 'nożyce';
       }
     }
-    printMessage('Mój ruch to ' + argComputerMove);
-    console.log('Wylosowana liczba to: ' + randomNumber);
-
-    //player rule
-    let argPlayerMove = getMoveName(playerInput);
+    let argPlayerMove = getMoveName(playerInput)
     printMessage('Twój ruch to ' + argPlayerMove);
     console.log('Gracz wpisał: ' + playerInput);
 
+    let argComputerMove = getMoveName(randomNumber);
+    printMessage('Mój ruch to ' + argComputerMove);
+
     //Results
     console.log('moves:', argComputerMove, argPlayerMove);
-      function displyResult(argComputerMove, argPlayerMove) {
+
+    const displyResults = function() {
       if (argComputerMove == 'kamień' && argPlayerMove == 'papier') {
         PlayerScore++;
         return ('Brawo! Ty wygrywasz!');
@@ -45,10 +44,10 @@
         return ('Przykro mi, przegrywasz. Spróbuj szczęścia ponownie');
       }
     }
-    printMessage('wynik: ' + displyResult(argComputerMove, argPlayerMove));
+    printMessage('wynik: ' + displyResults(argComputerMove, argPlayerMove));
     GetResult();
   }
-  function GetResult() {
+  let GetResult = function() {
     document.getElementById('result').innerHTML = 'punkty gracza: ' + PlayerScore + ' | ' + 'punkty przeciwnika: ' + ComputerScore;
   }
   document.getElementById('play-rock').addEventListener('click', function() {
